@@ -1,0 +1,775 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: darkslategray;
+    background-color: white;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+p {
+    color: dimgray;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.site-nav {
+    background-color: darkslategray;
+    padding: 16px 0;
+    box-shadow: 0 3px 15px gray;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.navbar-brand span {
+    color: goldenrod;
+}
+
+.site-nav .nav-link {
+    color: white !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 15px !important;
+    margin-left: 4px;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+    color: gold !important;
+    background-color: darkgreen;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem goldenrod;
+}
+
+.hero-section {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, darkslategray, darkgreen);
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-content p {
+    color: white;
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: goldenrod;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-gold {
+    background-color: goldenrod;
+    color: darkslategray;
+    border: 2px solid goldenrod;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-weight: 700;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: goldenrod;
+    border-color: goldenrod;
+    transform: translateY(-2px);
+}
+
+.btn-dark-custom {
+    background-color: darkgreen;
+    color: white;
+    border: 2px solid darkgreen;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-weight: 700;
+}
+
+.btn-dark-custom:hover {
+    background-color: darkslategray;
+    color: gold;
+    border-color: darkslategray;
+    transform: translateY(-2px);
+}
+
+.section-padding {
+    padding: 85px 0;
+}
+
+.soft-section {
+    background-color: ivory;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: darkgreen;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.page-banner {
+    background: linear-gradient(135deg, darkslategray, darkgreen);
+    color: white;
+    text-align: center;
+    padding: 85px 0;
+}
+
+.page-banner h1 {
+    color: white;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.page-banner p {
+    color: white;
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.section-padding h2 {
+    color: darkgreen;
+    font-weight: 800;
+}
+
+.section-padding .row.align-items-center img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.feature-card {
+    background-color: white;
+    border: 1px solid gainsboro;
+    border-radius: 16px;
+    padding: 30px 25px;
+    height: 100%;
+    box-shadow: 0 10px 30px lightgray;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 35px gray;
+}
+
+.feature-card h3 {
+    color: darkgreen;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 18px 0 12px;
+}
+
+.feature-card p {
+    margin-bottom: 0;
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ivory;
+    color: darkgreen;
+    border-radius: 14px;
+    font-size: 1.7rem;
+}
+
+.destination-card {
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid gainsboro;
+    box-shadow: 0 10px 30px lightgray;
+    transition: all 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 35px gray;
+}
+
+.destination-card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    color: darkgreen;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 18px 20px 10px;
+}
+
+.destination-card p {
+    padding: 0 20px;
+}
+
+.destination-card .text-link {
+    display: inline-block;
+    color: darkgreen;
+    font-weight: 700;
+    margin: 8px 20px 20px;
+}
+
+.text-link {
+    color: darkgreen;
+    font-weight: 700;
+}
+
+.text-link:hover,
+.destination-card .text-link:hover {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+.accordion-item {
+    border: 1px solid gainsboro;
+    border-radius: 9px !important;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    color: darkgreen;
+    background-color: white;
+    font-weight: 700;
+    padding: 18px 20px;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: darkgreen;
+}
+
+.accordion-body {
+    color: dimgray;
+    background-color: white;
+    padding: 20px;
+}
+
+.form-panel {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid gainsboro;
+    box-shadow: 0 10px 30px lightgray;
+}
+
+.form-panel h2 {
+    color: darkgreen;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 28px;
+}
+
+.form-panel .eyebrow {
+    color: goldenrod;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.form-panel .form-label {
+    color: darkslategray;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-panel .form-control,
+.form-panel .form-select {
+    min-height: 48px;
+    border: 1px solid gainsboro;
+    border-radius: 9px;
+    padding: 11px 14px;
+    color: darkslategray;
+    background-color: white;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-panel textarea.form-control {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-panel .form-control:focus,
+.form-panel .form-select:focus {
+    border-color: darkgreen;
+    box-shadow: 0 0 0 0.2rem lightgreen;
+    outline: none;
+}
+
+.form-panel .form-control::placeholder {
+    color: gray;
+    opacity: 1;
+}
+
+.form-panel .invalid-feedback {
+    font-size: 0.85rem;
+    margin-top: 6px;
+}
+
+.form-panel .form-control.is-invalid,
+.form-panel .form-select.is-invalid {
+    border-color: firebrick;
+}
+
+.form-panel .form-control.is-valid,
+.form-panel .form-select.is-valid {
+    border-color: forestgreen;
+}
+
+.form-panel .alert-info {
+    background-color: honeydew;
+    border: 1px solid lightgreen;
+    border-left: 4px solid darkgreen;
+    border-radius: 9px;
+    color: darkslategray;
+    font-size: 0.9rem;
+    padding: 14px 16px;
+}
+
+#bookingTotal {
+    color: darkgreen;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+#calculateBooking {
+    border-color: darkgreen;
+    color: darkgreen;
+    border-radius: 7px;
+    font-weight: 600;
+    padding: 7px 15px;
+    transition: all 0.3s ease;
+}
+
+#calculateBooking:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+.form-panel .btn-dark-custom {
+    width: 100%;
+    min-height: 50px;
+    border-radius: 9px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+#bookingMessage {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.gallery-carousel {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 45px;
+    background-color: darkslategray;
+}
+
+.gallery-carousel .carousel-inner {
+    border-radius: 16px;
+}
+
+.gallery-carousel .carousel-item {
+    position: relative;
+}
+
+.gallery-carousel .carousel-item img {
+    display: block;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gallery-carousel .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, black, transparent);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.gallery-carousel .carousel-caption {
+    z-index: 2;
+    bottom: 45px;
+}
+
+.gallery-carousel .carousel-caption h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.gallery-carousel .carousel-caption p {
+    color: white;
+}
+
+.gallery-carousel .carousel-indicators {
+    z-index: 3;
+}
+
+.gallery-grid {
+    margin-top: 15px;
+}
+
+.gallery-grid > div {
+    display: flex;
+}
+
+.gallery-thumb {
+    display: block;
+    width: 100%;
+    height: 260px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 3px solid white;
+    border-radius: 13px;
+    background-color: ivory;
+    box-shadow: 0 10px 30px lightgray;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.gallery-thumb:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px gray;
+}
+
+.gallery-thumb:hover img {
+    transform: scale(1.07);
+}
+
+#galleryModal .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#galleryPreview {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.site-footer {
+    background-color: darkslategray;
+    color: white;
+    padding: 28px 0;
+}
+
+.site-footer p {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: goldenrod;
+}
+
+.site-footer a:hover {
+    color: white;
+}
+
+.current-year {
+    color: goldenrod;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid goldenrod;
+    outline-offset: 3px;
+}
+
+::selection {
+    color: darkslategray;
+    background-color: gold;
+}
+
+@media (max-width: 991px) {
+    .site-nav .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .site-nav .nav-link {
+        margin: 3px 0;
+    }
+
+    .hero-section {
+        min-height: 520px;
+        padding: 80px 0;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .form-panel {
+        padding: 28px;
+    }
+
+    .gallery-carousel .carousel-item img {
+        height: 380px;
+    }
+
+    .gallery-thumb {
+        height: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    .site-nav {
+        padding: 12px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .hero-section {
+        min-height: 480px;
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.35rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .page-banner {
+        padding: 65px 15px;
+    }
+
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+    .destination-card img {
+        height: 210px;
+    }
+
+    .form-panel {
+        padding: 22px 18px;
+        border-radius: 12px;
+    }
+
+    .form-panel h2 {
+        font-size: 1.65rem;
+    }
+
+    #bookingTotal {
+        font-size: 1.1rem;
+    }
+
+    #calculateBooking {
+        width: 100%;
+    }
+
+    .gallery-carousel .carousel-item img {
+        height: 270px;
+    }
+
+    .gallery-carousel .carousel-caption {
+        bottom: 25px;
+    }
+
+    .gallery-carousel .carousel-caption h2 {
+        font-size: 1.3rem;
+    }
+
+    .gallery-carousel .carousel-caption p {
+        font-size: 0.85rem;
+    }
+
+    .gallery-thumb {
+        height: 150px;
+        border-radius: 9px;
+    }
+
+    .gallery-grid {
+        row-gap: 10px;
+        column-gap: 0;
+    }
+
+    .site-footer {
+        text-align: center;
+        padding: 25px 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.site-nav .navbar-collapse {
+    visibility: visible;
+}
+
+.site-nav .navbar-nav {
+    display: flex;
+}
+
+.site-nav .nav-link {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+@media (min-width: 992px) {
+    .site-nav .navbar-collapse {
+        display: flex !important;
+    }
+
+    .site-nav .navbar-nav {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .site-nav .navbar-collapse.show {
+        display: block;
+    }
+
+    .site-nav .navbar-nav {
+        flex-direction: column;
+    }
+}
